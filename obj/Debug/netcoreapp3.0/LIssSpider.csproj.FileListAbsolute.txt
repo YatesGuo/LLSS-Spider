@@ -1,0 +1,11 @@
+F:\Repos\1.DemoProjects(for test only)\LIssSpider\bin\Debug\netcoreapp3.0\LIssSpider.exe
+F:\Repos\1.DemoProjects(for test only)\LIssSpider\bin\Debug\netcoreapp3.0\LIssSpider.deps.json
+F:\Repos\1.DemoProjects(for test only)\LIssSpider\bin\Debug\netcoreapp3.0\LIssSpider.runtimeconfig.json
+F:\Repos\1.DemoProjects(for test only)\LIssSpider\bin\Debug\netcoreapp3.0\LIssSpider.runtimeconfig.dev.json
+F:\Repos\1.DemoProjects(for test only)\LIssSpider\bin\Debug\netcoreapp3.0\LIssSpider.dll
+F:\Repos\1.DemoProjects(for test only)\LIssSpider\bin\Debug\netcoreapp3.0\LIssSpider.pdb
+F:\Repos\1.DemoProjects(for test only)\LIssSpider\obj\Debug\netcoreapp3.0\LIssSpider.csprojAssemblyReference.cache
+F:\Repos\1.DemoProjects(for test only)\LIssSpider\obj\Debug\netcoreapp3.0\LIssSpider.AssemblyInfoInputs.cache
+F:\Repos\1.DemoProjects(for test only)\LIssSpider\obj\Debug\netcoreapp3.0\LIssSpider.AssemblyInfo.cs
+F:\Repos\1.DemoProjects(for test only)\LIssSpider\obj\Debug\netcoreapp3.0\LIssSpider.dll
+F:\Repos\1.DemoProjects(for test only)\LIssSpider\obj\Debug\netcoreapp3.0\LIssSpider.pdb
