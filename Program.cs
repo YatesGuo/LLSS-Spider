@@ -5,6 +5,7 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
+//using System.Xml;
 
 namespace LIssSpider
 {
@@ -24,35 +25,49 @@ namespace LIssSpider
 
             //匹配出磁链 magnet:?xt=urn:btih:
             //Regex Magreg = new Regex(@"(?<=\>)([0-9a-zA-Z]{40})(?=\<)");
-            
+
             //匹配出标题
-            Regex Titlereg = new Regex(@"(?<=<h1 class=""entry-title"">)(.*)(?=</h1>)");
-           
+            //Regex Titlereg = new Regex(@"(?<=<h1 class=""entry-title"">)(.*)(?=</h1>)");
+
             //匹配出封面图
-            Regex TitleImgreg = new Regex(@"(?<=<!--// MetaSlider--><p><img class=""aligncenter size-full wp-image-\d*"" src="")(.*\.(jpg|png))(?="" )");
-            
+            //Regex TitleImgreg = new Regex(@"(?<=<!--// MetaSlider--><p><img class=""aligncenter size-full wp-image-\d*"" src="")(.*\.(jpg|png))(?="" )");
+
             //匹配出说明
-            Regex Desreg1 = new Regex(@"(?<=/>)(.*)(?=<span id=""more-\d*""></span></p>)");
-            Regex Desreg2 = new Regex(@"(?<=<span id=""more-\d*""></span></p>\n<p>)(.*)(?=</p>)");
-            
+            //Regex Desreg1 = new Regex(@"(?<=/>)(.*)(?=<span id=""more-\d*""></span></p>)");
+            //Regex Desreg2 = new Regex(@"(?<=<span id=""more-\d*""></span></p>\n<p>)(.*)(?=</p>)");
+
             //匹配出配图
-            Regex DesImgreg = new Regex(@"(?<=</p>\n<p><img class=""aligncenter size-full wp-image-\d*"" src="")(.*\.(jpg|png))(?="" )");
-            
+            //Regex DesImgreg = new Regex(@"(?<=</p>\n<p><img class=""aligncenter size-full wp-image-\d*"" src="")(.*\.(jpg|png))(?="" )");
+
             //匹配出标签
-            Regex Tagreg = new Regex(@"(?<=rel=""tag"">)(.{0,20})(?=</a>)");
+            //Regex Tagreg = new Regex(@"(?<=rel=""tag"">)(.{0,20})(?=</a>)");
             #endregion
 
+            string mainPage = "http://www.llss.life/";
+            
+            string viewed_Posts = Environment.CurrentDirectory + "\\viewed_Posts.txt";
+            string magnet_urls = Environment.CurrentDirectory + "\\magnet_url.txt";
+            if (!File.Exists(viewed_Posts))
+            {
+                File.Create(viewed_Posts).Dispose();
+            }
+            if (!File.Exists(magnet_urls))
+            {
+                File.Create(magnet_urls).Dispose();
+            }
+
+            
             List<string> PostUrls = new List<string>();
             List<string> urls = new List<string>();
-            List<string> Megs = new List<string>();
-            urls.Add("http://www.llss.life/wp/category/all/comic/");
-            for (int i = 2; i < 2; i++)
+            //List<string> Megs = new List<string>();
+            urls.Add(mainPage+ "wp/category/all/comic/");
+            for (int i = 2; i < 10; i++)
             {
-                urls.Add(@$"http://www.llss.life/wp/category/all/comic/page/{i}/");
+                urls.Add(@$"{mainPage}wp/category/all/comic/page/{i}/");
             }
 
             foreach (string url in urls)
-            {
+            {//拿取文章实际链接
                 Thread.Sleep(500);
                 string html = GetHtml(url, out string msg);
                 
@@ -61,16 +76,85 @@ namespace LIssSpider
                 {
                     PostUrls.Add(Url.ToString());
                 }
+                if (File.ReadAllText(viewed_Posts).Contains(PostUrls[PostUrls.Count - 1]))
+                {
+                    break;
+                }
             }
 
             foreach (string PostsUrl in PostUrls)
             {
-                string postshtml = GetHtml(PostsUrl,out string msg);
-                Regex Magreg = new Regex(@"(?<=\>)([0-9a-zA-Z]{40})(?=\<)");
-                foreach (object magnet in Magreg.Matches(postshtml))
+                if (File.ReadAllText(viewed_Posts).Contains(PostsUrl))
                 {
-                    Megs.Add("magnet:?xt=urn:btih:" + magnet.ToString());
+                    continue;
                 }
+                Thread.Sleep(500);
+                StreamWriter sw_viewed_Posts = File.AppendText(viewed_Posts);
+                StreamWriter sw_magnet_urls = File.AppendText(magnet_urls);
+
+                string postshtml = GetHtml(PostsUrl,out string msg);
+                //XmlDocument xml = new XmlDocument();
+                //xml.LoadXml(postshtml);
+                //XmlNode node = xml.SelectSingleNode("/body/");
+
+                Regex Titlereg = //标题
+                    new Regex(@"(?<=<h1 class=""entry-title"">)(.*)(?=</h1>)");
+                Regex Authorreg = //作者
+                    new Regex(@"(?<=rel=""author"">)(.*)(?=</a>)");
+                Regex TitleImgreg = //标题配图
+                    new Regex(@"(?<=<!--// MetaSlider--><p><img class=""aligncenter size-full wp-image-\d*"" src="")(.*\.(jpg|png))(?="" )");
+                Regex Desreg1 = //描述
+                    new Regex(@"(?<=<p>)(.*)(?=<span id=""more-\d*""></span></p>)");
+                Regex Desreg2 = //简介
+                    new Regex(@"(?<=</p>\n<p>)(.*)(?=</p>\n<p>)");
+                Regex DesImgreg = //简介配图
+                    new Regex(@"(?<=</p>\n<p><img class=""aligncenter size-full wp-image-\d*"" src="")(.*\.(jpg|png))(?="" )");
+                Regex Tagreg = //标签
+                    new Regex(@"(?<=rel=""tag"">)(.{0,20})(?=</a>)");
+                Regex Magreg = //磁链
+                    new Regex(@"(?<=\>)([0-9a-zA-Z]{40})(?=\<)");
+
+                foreach (var Title in Titlereg.Matches(postshtml))
+                {//标题
+                    sw_magnet_urls.WriteLine("标题： "+Title);
+                }
+                foreach (var Author in Authorreg.Matches(postshtml))
+                {//作者
+                    sw_magnet_urls.WriteLine("作者： "+Author);
+                }
+                foreach (var TitleImg in TitleImgreg.Matches(postshtml))
+                {//标题图
+                    sw_magnet_urls.WriteLine("标题图： " + TitleImg);
+                }
+                foreach (object des1 in Desreg1.Matches(postshtml))
+                {//描述
+                    sw_magnet_urls.WriteLine("描述： " + des1);
+                }
+                foreach (object DesImg in DesImgreg.Matches(postshtml))
+                {//简介配图
+                    sw_magnet_urls.WriteLine("简介配图： " + DesImg);
+                }
+                string Tags = "";
+                foreach (object Tag in Tagreg.Matches(postshtml))
+                {//标签
+                    Tags += Tag+" ";
+                }
+                sw_magnet_urls.WriteLine(Tags);
+                foreach (object des2 in Desreg2.Matches(postshtml.Replace("<br />\n","")))
+                {//简介
+                    sw_magnet_urls.WriteLine("简介： "+des2);
+                }
+                foreach (object magnet in Magreg.Matches(postshtml))
+                {//磁链
+                    sw_magnet_urls.WriteLine("magnet:?xt=urn:btih:" + magnet);
+                }
+                sw_magnet_urls.WriteLine(PostsUrl + "\n");
+                sw_viewed_Posts.WriteLine(PostsUrl);
+
+                sw_magnet_urls.Flush();
+                sw_magnet_urls.Close();
+                sw_viewed_Posts.Flush();
+                sw_viewed_Posts.Close();
             }
 
             static string GetHtml(string url,out string msg)
