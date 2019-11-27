@@ -13,6 +13,8 @@ namespace LIssSpider
     {
         static void Main(string[] args)
         {
+            
+
             #region
             //comic主页面
             //http://www.llss.life/wp/category/all/comic/
@@ -43,10 +45,12 @@ namespace LIssSpider
             //Regex Tagreg = new Regex(@"(?<=rel=""tag"">)(.{0,20})(?=</a>)");
             #endregion
 
-            string mainPage = "http://www.llss.life/";
+            string mainPage = "http://llss.life/";
             
             string viewed_Posts = Environment.CurrentDirectory + "\\viewed_Posts.txt";
-            string magnet_urls = Environment.CurrentDirectory + "\\magnet_url.txt";
+            string magnet_urls = Environment.CurrentDirectory + "\\magnet_url.md";
+
+            //string[] lines = File.ReadAllLines(magnet_urls);
             if (!File.Exists(viewed_Posts))
             {
                 File.Create(viewed_Posts).Dispose();
@@ -75,6 +79,10 @@ namespace LIssSpider
                 foreach (object Url in PostsUrlreg.Matches(html))
                 {
                     PostUrls.Add(Url.ToString());
+                }
+                if (PostUrls.Count==0)
+                {
+                    break;
                 }
                 if (File.ReadAllText(viewed_Posts).Contains(PostUrls[PostUrls.Count - 1]))
                 {
@@ -116,7 +124,7 @@ namespace LIssSpider
 
                 foreach (var Title in Titlereg.Matches(postshtml))
                 {//标题
-                    sw_magnet_urls.WriteLine("标题： "+Title);
+                    sw_magnet_urls.WriteLine("### 标题： " + Title);
                 }
                 foreach (var Author in Authorreg.Matches(postshtml))
                 {//作者
@@ -124,15 +132,15 @@ namespace LIssSpider
                 }
                 foreach (var TitleImg in TitleImgreg.Matches(postshtml))
                 {//标题图
-                    sw_magnet_urls.WriteLine("标题图： " + TitleImg);
+                    sw_magnet_urls.WriteLine("标题图： \n![Alt text](" + TitleImg + ")");
                 }
                 foreach (object des1 in Desreg1.Matches(postshtml))
                 {//描述
-                    sw_magnet_urls.WriteLine("描述： " + des1);
+                    sw_magnet_urls.WriteLine("* 描述： " + des1);
                 }
                 foreach (object DesImg in DesImgreg.Matches(postshtml))
                 {//简介配图
-                    sw_magnet_urls.WriteLine("简介配图： " + DesImg);
+                    sw_magnet_urls.WriteLine("简介配图： \n![Alt text](" + DesImg + ")");
                 }
                 string Tags = "";
                 foreach (object Tag in Tagreg.Matches(postshtml))
@@ -142,20 +150,24 @@ namespace LIssSpider
                 sw_magnet_urls.WriteLine(Tags);
                 foreach (object des2 in Desreg2.Matches(postshtml.Replace("<br />\n","")))
                 {//简介
-                    sw_magnet_urls.WriteLine("简介： "+des2);
+                    sw_magnet_urls.WriteLine("* 简介： " + des2);
                 }
                 foreach (object magnet in Magreg.Matches(postshtml))
                 {//磁链
                     sw_magnet_urls.WriteLine("magnet:?xt=urn:btih:" + magnet);
                 }
-                sw_magnet_urls.WriteLine(PostsUrl + "\n");
+                sw_magnet_urls.WriteLine("* 原文地址：" + PostsUrl + "\n");
                 sw_viewed_Posts.WriteLine(PostsUrl);
-
+                
                 sw_magnet_urls.Flush();
                 sw_magnet_urls.Close();
                 sw_viewed_Posts.Flush();
                 sw_viewed_Posts.Close();
+                Console.WriteLine(PostsUrl);
             }
+
+            
+
 
             static string GetHtml(string url,out string msg)
             {
