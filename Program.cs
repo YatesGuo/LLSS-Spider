@@ -169,9 +169,12 @@ namespace LIssSpider
                 Console.WriteLine(PostsUrl);
             }
 
-            string writeline = @$"[{DateTime.Today.ToString("yyyyMMdd")}集合](https://github.com/YatesGuo/LLSS-Spider/blob/master/bin/Debug/netcoreapp3.0/{DateTime.Today.ToString("yyyyMMdd")}magnet_url.md)";
-
-            if (!File.ReadAllText(readme).Contains(writeline))
+            string writeline = $"\r\n[{DateTime.Today.ToString("yyyyMMdd")}集合](https://github.com/YatesGuo/LLSS-Spider/blob/master/bin/Debug/netcoreapp3.0/{DateTime.Today.ToString("yyyyMMdd")}magnet_url.md)";
+            if (File.ReadAllText(magnet_urls).Length<=1)
+            {
+                File.Delete(magnet_urls);
+            }
+            if (File.Exists(magnet_urls) && !File.ReadAllText(readme).Contains(writeline))
             {
                 StreamWriter ReadmeMd = File.AppendText(readme);
                 
