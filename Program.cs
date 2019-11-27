@@ -168,10 +168,17 @@ namespace LIssSpider
                 sw_viewed_Posts.Close();
                 Console.WriteLine(PostsUrl);
             }
-            StreamWriter ReadmeMd = File.AppendText(readme);
-            ReadmeMd.WriteLine(@$"[{DateTime.Today}集合](https://github.com/YatesGuo/LLSS-Spider/blob/master/bin/Debug/netcoreapp3.0/{DateTime.Today.ToString("yyyyMMdd")}magnet_url.md)");
-            ReadmeMd.Flush();
-            ReadmeMd.Close();
+
+            string writeline = @$"[{DateTime.Today.ToString("yyyyMMdd")}集合](https://github.com/YatesGuo/LLSS-Spider/blob/master/bin/Debug/netcoreapp3.0/{DateTime.Today.ToString("yyyyMMdd")}magnet_url.md)";
+
+            if (!File.ReadAllText(readme).Contains(writeline))
+            {
+                StreamWriter ReadmeMd = File.AppendText(readme);
+                
+                ReadmeMd.WriteLine(writeline);
+                ReadmeMd.Flush();
+                ReadmeMd.Close();
+            }
 
 
             static string GetHtml(string url,out string msg)
