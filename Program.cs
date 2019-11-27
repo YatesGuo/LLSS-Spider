@@ -49,10 +49,9 @@ namespace LIssSpider
 
             string readme = "F:\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\README.md";//修改git readme
             string viewed_Posts = Environment.CurrentDirectory + "\\viewed_Posts.txt";
-            string magnet_urls = Environment.CurrentDirectory + "\\"+DateTime.Today.ToString("yyyyMMdd")+"magnet_url.md";
+            string magnet_urls = Environment.CurrentDirectory + "\\"+DateTime.Today.ToString("yyyyMMdd")+"-magnet_url.md";
             
 
-            //string[] lines = File.ReadAllLines(magnet_urls);
             if (!File.Exists(viewed_Posts))
             {
                 File.Create(viewed_Posts).Dispose();
@@ -60,13 +59,21 @@ namespace LIssSpider
             if (!File.Exists(magnet_urls))
             {
                 File.Create(magnet_urls).Dispose();
+                StreamWriter sw_md = File.AppendText(magnet_urls);
+                sw_md.WriteLine(@$"---
+title: LLSS {DateTime.Now.ToString("yyyyMMdd")}
+date: {DateTime.Now}
+tags:
+---");
+                sw_md.Flush();
+                sw_md.Close();
             }
 
 
             
             List<string> PostUrls = new List<string>();
             List<string> urls = new List<string>();
-            //List<string> Megs = new List<string>();
+
             urls.Add(mainPage+ "wp/category/all/comic/");
             for (int i = 2; i < 10; i++)
             {
@@ -104,9 +111,7 @@ namespace LIssSpider
                 StreamWriter sw_magnet_urls = File.AppendText(magnet_urls);
 
                 string postshtml = GetHtml(PostsUrl,out string msg);
-                //XmlDocument xml = new XmlDocument();
-                //xml.LoadXml(postshtml);
-                //XmlNode node = xml.SelectSingleNode("/body/");
+
 
                 Regex Titlereg = //标题
                     new Regex(@"(?<=<h1 class=""entry-title"">)(.*)(?=</h1>)");
@@ -125,6 +130,7 @@ namespace LIssSpider
                 Regex Magreg = //磁链
                     new Regex(@"(?<=\>)([0-9a-zA-Z]{40})(?=\<)");
 
+                
                 foreach (var Title in Titlereg.Matches(postshtml))
                 {//标题
                     sw_magnet_urls.WriteLine("### 标题： " + Title);
@@ -169,8 +175,8 @@ namespace LIssSpider
                 Console.WriteLine(PostsUrl);
             }
 
-            string writeline = $"\r\n[{DateTime.Today.ToString("yyyyMMdd")}集合](https://github.com/YatesGuo/LLSS-Spider/blob/master/bin/Debug/netcoreapp3.0/{DateTime.Today.ToString("yyyyMMdd")}magnet_url.md)";
-            if (File.ReadAllText(magnet_urls).Length<=1)
+            string writeline = $"\r\n[{DateTime.Today.ToString("yyyyMMdd")}集合](https://github.com/YatesGuo/LLSS-Spider/blob/master/bin/Debug/netcoreapp3.0/{DateTime.Today.ToString("yyyyMMdd")}-magnet_url.md)";
+            if (File.ReadAllLines(magnet_urls).Length<=5)
             {
                 File.Delete(magnet_urls);
             }
@@ -181,6 +187,7 @@ namespace LIssSpider
                 ReadmeMd.WriteLine(writeline);
                 ReadmeMd.Flush();
                 ReadmeMd.Close();
+                File.Copy(magnet_urls, "F:\\A\\source\\_posts\\" + DateTime.Today.ToString("yyyyMMdd") + "-magnet_url.md",true);
             }
 
 

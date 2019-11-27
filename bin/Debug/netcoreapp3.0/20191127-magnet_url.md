@@ -1,8 +1,20 @@
 ---
-title: 神社SPIDER
-date: 2019-11-20 11:23:46
+title: LLSS 20191127
+date: 2019/11/27 14:16:59
 tags:
 ---
+### 标题： [ひぐま屋 (野良ヒグマ)] お姉ちゃんの友達がエッチな人ばかりだったから
+作者： 哆啦H萌
+标题图： 
+![Alt text](http://llss.life/wp/wp-content/uploads/2019/11/04-8.jpg)
+* 描述： <img class="aligncenter size-full wp-image-12827" src="http://llss.life/wp/wp-content/uploads/2019/11/04-8.jpg" alt="" width="1200" height="457" srcset="http://llss.life/wp/wp-content/uploads/2019/11/04-8.jpg 1200w, http://llss.life/wp/wp-content/uploads/2019/11/04-8-300x114.jpg 300w, http://llss.life/wp/wp-content/uploads/2019/11/04-8-768x292.jpg 768w, http://llss.life/wp/wp-content/uploads/2019/11/04-8-1024x390.jpg 1024w, http://llss.life/wp/wp-content/uploads/2019/11/04-8-500x190.jpg 500w" sizes="(max-width: 1200px) 100vw, 1200px" />请容许我把这个本子加上科幻标签，因为故事内容发生在太阳系第十大行星，X惑星上（地球上没有这种姐姐的朋友）
+简介配图： 
+![Alt text](http://llss.life/wp/wp-content/uploads/2019/11/01-18.jpg)
+年上 御姐 正太 科幻 逆推 
+* 简介： 作品内容
+* 简介： ひょんなことから姉の友人とエッチな関係になり、さらに別の友人とも…という感じの漫画です。年上のお姉さんばかり出てきます。フルカラー29ページ
+magnet:?xt=urn:btih:9d634672cd69362a587b264bb91f87f9e6875510
+* 原文地址：http://llss.life/wp/all/comic/%e3%81%b2%e3%81%90%e3%81%be%e5%b1%8b-%e9%87%8e%e8%89%af%e3%83%92%e3%82%b0%e3%83%9e-%e3%81%8a%e5%a7%89%e3%81%a1%e3%82%83%e3%82%93%e3%81%ae%e5%8f%8b%e9%81%94%e3%81%8c%e3%82%a8%e3%83%83%e3%83%81/
 
 ### 标题： [ありすの宝箱 (水龍敬)] 魔物様のしもべ (ドラゴンクエストXI)
 作者： 哆啦H萌
@@ -904,34 +916,4 @@ magnet:?xt=urn:btih:bf15a00e24ae7011b19b5393d56b488567425ea5
 护士 
 magnet:?xt=urn:btih:5ec6ac2fe215099f73994520ebd75b26fdd80f64
 * 原文地址：http://llss.life/wp/all/comic/%e8%a6%81%e9%9d%92%e8%b1%86-%e3%83%91%e3%82%b3%e3%83%91%e3%82%b3%e3%83%8a%e3%83%bc%e3%82%b9-v-%e7%9c%9f%e6%bf%80comics/
-
-### 标题： [どうしょく] いれかわりっ!!~妹のカラダでセックス三昧~
-作者： 哆啦H萌
-标题图： 
-![Alt text](http://llss.life/wp/wp-content/uploads/2019/01/01-2.jpg)
-* 描述： <img class="aligncenter size-full wp-image-10367" src="http://llss.life/wp/wp-content/uploads/2019/01/01-2.jpg" alt="" width="1200" height="674" srcset="http://llss.life/wp/wp-content/uploads/2019/01/01-2.jpg 1200w, http://llss.life/wp/wp-content/uploads/2019/01/01-2-300x169.jpg 300w, http://llss.life/wp/wp-content/uploads/2019/01/01-2-768x431.jpg 768w, http://llss.life/wp/wp-content/uploads/2019/01/01-2-1024x575.jpg 1024w, http://llss.life/wp/wp-content/uploads/2019/01/01-2-500x281.jpg 500w" sizes="(max-width: 1200px) 100vw, 1200px" />男主下楼梯的时候和妹妹撞在一起，于是就和妹妹换了身体。
-简介配图： 
-![Alt text](http://llss.life/wp/wp-content/uploads/2019/01/02-2.jpg)
-TS どうしょく 学园 黒烏龍 
-* 简介： 作品内容「何だこれ…一体どうなってるんだ…?!」
-* 简介： 妹とぶつかったことにより、身体が入れ替わってしまった主人公の春馬。最初は慌てていたものの、聞いたことを思い出す。
-* 简介： &nbsp;
-* 简介： 「女のカラダってきもちいい…!!」
-* 简介： そして妹のでセックスしまくる三日間が始まるー…!
-* 简介： &nbsp;
-magnet:?xt=urn:btih:1d8979e9f0b9998eb74cb9f14ffdd500f6b8cb02
-* 原文地址：http://llss.life/wp/all/comic/%e3%81%a9%e3%81%86%e3%81%97%e3%82%87%e3%81%8f-%e3%81%84%e3%82%8c%e3%81%8b%e3%82%8f%e3%82%8a%e3%81%a3%e5%a6%b9%e3%81%ae%e3%82%ab%e3%83%a9%e3%83%80%e3%81%a7%e3%82%bb%e3%83%83%e3%82%af%e3%82%b9/
-
-### 标题： [ひぐま屋 (野良ヒグマ)] お姉ちゃんの友達がエッチな人ばかりだったから
-作者： 哆啦H萌
-标题图： 
-![Alt text](http://llss.life/wp/wp-content/uploads/2019/11/04-8.jpg)
-* 描述： <img class="aligncenter size-full wp-image-12827" src="http://llss.life/wp/wp-content/uploads/2019/11/04-8.jpg" alt="" width="1200" height="457" srcset="http://llss.life/wp/wp-content/uploads/2019/11/04-8.jpg 1200w, http://llss.life/wp/wp-content/uploads/2019/11/04-8-300x114.jpg 300w, http://llss.life/wp/wp-content/uploads/2019/11/04-8-768x292.jpg 768w, http://llss.life/wp/wp-content/uploads/2019/11/04-8-1024x390.jpg 1024w, http://llss.life/wp/wp-content/uploads/2019/11/04-8-500x190.jpg 500w" sizes="(max-width: 1200px) 100vw, 1200px" />请容许我把这个本子加上科幻标签，因为故事内容发生在太阳系第十大行星，X惑星上（地球上没有这种姐姐的朋友）
-简介配图： 
-![Alt text](http://llss.life/wp/wp-content/uploads/2019/11/01-18.jpg)
-年上 御姐 正太 科幻 逆推 
-* 简介： 作品内容
-* 简介： ひょんなことから姉の友人とエッチな関係になり、さらに別の友人とも…という感じの漫画です。年上のお姉さんばかり出てきます。フルカラー29ページ
-magnet:?xt=urn:btih:9d634672cd69362a587b264bb91f87f9e6875510
-* 原文地址：http://llss.life/wp/all/comic/%e3%81%b2%e3%81%90%e3%81%be%e5%b1%8b-%e9%87%8e%e8%89%af%e3%83%92%e3%82%b0%e3%83%9e-%e3%81%8a%e5%a7%89%e3%81%a1%e3%82%83%e3%82%93%e3%81%ae%e5%8f%8b%e9%81%94%e3%81%8c%e3%82%a8%e3%83%83%e3%83%81/
 
