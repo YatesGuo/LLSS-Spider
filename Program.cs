@@ -46,9 +46,11 @@ namespace LIssSpider
             #endregion
 
             string mainPage = "http://llss.life/";
-            
+
+            string readme = "F:\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\README.md";//修改git readme
             string viewed_Posts = Environment.CurrentDirectory + "\\viewed_Posts.txt";
-            string magnet_urls = Environment.CurrentDirectory + "\\magnet_url.md";
+            string magnet_urls = Environment.CurrentDirectory + "\\"+DateTime.Today.ToString("yyyyMMdd")+"magnet_url.md";
+            
 
             //string[] lines = File.ReadAllLines(magnet_urls);
             if (!File.Exists(viewed_Posts))
@@ -59,6 +61,7 @@ namespace LIssSpider
             {
                 File.Create(magnet_urls).Dispose();
             }
+
 
             
             List<string> PostUrls = new List<string>();
@@ -165,8 +168,10 @@ namespace LIssSpider
                 sw_viewed_Posts.Close();
                 Console.WriteLine(PostsUrl);
             }
-
-            
+            StreamWriter ReadmeMd = File.AppendText(readme);
+            ReadmeMd.WriteLine(@$"[{DateTime.Today}集合](https://github.com/YatesGuo/LLSS-Spider/blob/master/bin/Debug/netcoreapp3.0/{DateTime.Today.ToString("yyyyMMdd")}magnet_url.md)");
+            ReadmeMd.Flush();
+            ReadmeMd.Close();
 
 
             static string GetHtml(string url,out string msg)
