@@ -63,7 +63,7 @@ namespace LIssSpider
                 sw_md.WriteLine(@$"---
 title: LLSS {DateTime.Now.ToString("yyyyMMdd")}
 date: {DateTime.Now}
-tags:
+tags:  琉璃神社
 ---");
                 sw_md.Flush();
                 sw_md.Close();
