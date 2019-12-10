@@ -45,7 +45,7 @@ namespace LIssSpider
             //Regex Tagreg = new Regex(@"(?<=rel=""tag"">)(.{0,20})(?=</a>)");
             #endregion
 
-            string mainPage = "http://llss.life/";
+            string mainPage = "http://llss.lc/";
 
             string readme = "F:\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\README.md";//修改git readme
             string viewed_Posts = Environment.CurrentDirectory + "\\viewed_Posts.txt";
@@ -102,8 +102,9 @@ tags:  琉璃神社
 
             foreach (string PostsUrl in PostUrls)
             {
-                if (File.ReadAllText(viewed_Posts).Contains(PostsUrl))
-                {
+                string vieweing_Post_url = PostsUrl.Replace($"{mainPage}wp/all/comic", "");
+                if (File.ReadAllText(viewed_Posts).Contains(vieweing_Post_url))
+                {//判断存档中是否包含
                     continue;
                 }
                 Thread.Sleep(500);
@@ -166,7 +167,7 @@ tags:  琉璃神社
                     sw_magnet_urls.WriteLine("magnet:?xt=urn:btih:" + magnet);
                 }
                 sw_magnet_urls.WriteLine("* 原文地址：" + PostsUrl + "\n");
-                sw_viewed_Posts.WriteLine(PostsUrl);
+                sw_viewed_Posts.WriteLine(vieweing_Post_url);//相对地址写进已读存档
                 
                 sw_magnet_urls.Flush();
                 sw_magnet_urls.Close();
