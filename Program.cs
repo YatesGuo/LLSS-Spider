@@ -45,7 +45,8 @@ namespace LIssSpider
             //Regex Tagreg = new Regex(@"(?<=rel=""tag"">)(.{0,20})(?=</a>)");
             #endregion
 
-            string mainPage = "http://llss.lc/";
+            string mainPage = "https://hacg.tw/";
+
 
             string readme = "F:\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\README.md";//修改git readme
             string viewed_Posts = Environment.CurrentDirectory + "\\viewed_Posts.txt";
