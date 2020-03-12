@@ -45,8 +45,8 @@ namespace LIssSpider
             //Regex Tagreg = new Regex(@"(?<=rel=""tag"">)(.{0,20})(?=</a>)");
             #endregion
 
-            string mainPage = "https://hacg.tw/";
-
+            //string mainPage = "https://hacg.tw/";
+            string mainPage = File.ReadAllText("MainPageUrl");
 
             string readme = "F:\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\README.md";//修改git readme
             string viewed_Posts = Environment.CurrentDirectory + "\\viewed_Posts.txt";
@@ -73,9 +73,10 @@ tags:  琉璃神社
 
             
             List<string> PostUrls = new List<string>();
-            List<string> urls = new List<string>();
-
-            urls.Add(mainPage+ "wp/category/all/comic/");
+            List<string> urls = new List<string>
+            {
+                mainPage + "wp/category/all/comic/"
+            };
             for (int i = 2; i < 10; i++)
             {
                 urls.Add(@$"{mainPage}wp/category/all/comic/page/{i}/");
@@ -111,8 +112,7 @@ tags:  琉璃神社
                 Thread.Sleep(500);
                 StreamWriter sw_viewed_Posts = File.AppendText(viewed_Posts);
                 StreamWriter sw_magnet_urls = File.AppendText(magnet_urls);
-
-                string postshtml = GetHtml(PostsUrl,out string msg);
+                string postshtml = GetHtml(PostsUrl,out _);
 
 
                 Regex Titlereg = //标题
