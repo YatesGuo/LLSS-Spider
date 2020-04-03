@@ -201,7 +201,7 @@ tags:  琉璃神社
                     HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
                     request.Method = "GET";
                     request.UserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36";
-                    request.AllowAutoRedirect = false;
+                    request.AllowAutoRedirect = true;
                     request.Timeout = 30000;
                     HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                     StreamReader sr = new StreamReader(response.GetResponseStream(), Encoding.UTF8);
