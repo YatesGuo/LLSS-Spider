@@ -23,3 +23,5 @@ LLSS爬虫
 [20200303集合](https://github.com/YatesGuo/LLSS-Spider/blob/master/bin/Debug/netcoreapp3.0/20200303-magnet_url.md)
 
 [20200310集合](https://github.com/YatesGuo/LLSS-Spider/blob/master/bin/Debug/netcoreapp3.0/20200310-magnet_url.md)
+
+[20200407集合](https://github.com/YatesGuo/LLSS-Spider/blob/master/bin/Debug/netcoreapp3.0/20200407-magnet_url.md)

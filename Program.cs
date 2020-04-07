@@ -13,7 +13,7 @@ namespace LIssSpider
     {
         static void Main()
         {
-            
+
 
             #region
             //comic主页面
@@ -46,7 +46,8 @@ namespace LIssSpider
             #endregion
 
             //string mainPage = "https://hacg.tw/";
-            string mainPage = File.ReadAllText("MainPageUrl");
+            //https://www.liuli.se/wp/comic.html/page/2
+            string mainPage = File.ReadAllText("MainPageUrl.txt");
 
             string readme = "F:\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\README.md";//修改git readme
             string viewed_Posts = Environment.CurrentDirectory + "\\viewed_Posts.txt";
@@ -75,11 +76,11 @@ tags:  琉璃神社
             List<string> PostUrls = new List<string>();
             List<string> urls = new List<string>
             {
-                mainPage + "wp/category/all/comic/"
+                mainPage + "wp/comic.html/"
             };
-            for (int i = 2; i < 10; i++)
+            for (int i = 2; i < 5; i++)
             {
-                urls.Add(@$"{mainPage}wp/category/all/comic/page/{i}/");
+                urls.Add(@$"{mainPage}wp/comic.html/page/{i}/");
             }
 
             foreach (string url in urls)
@@ -104,7 +105,7 @@ tags:  琉璃神社
 
             foreach (string PostsUrl in PostUrls)
             {
-                string vieweing_Post_url = PostsUrl.Replace($"{mainPage}wp/all/comic", "");
+                string vieweing_Post_url = PostsUrl.Replace($"{mainPage}", "");
                 if (File.ReadAllText(viewed_Posts).Contains(vieweing_Post_url))
                 {//判断存档中是否包含
                     continue;
