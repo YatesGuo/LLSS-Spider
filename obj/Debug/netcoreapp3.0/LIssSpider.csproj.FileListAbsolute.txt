@@ -9,3 +9,5 @@ F:\Repos\1.DemoProjects(for test only)\LIssSpider\obj\Debug\netcoreapp3.0\LIssSp
 F:\Repos\1.DemoProjects(for test only)\LIssSpider\obj\Debug\netcoreapp3.0\LIssSpider.AssemblyInfo.cs
 F:\Repos\1.DemoProjects(for test only)\LIssSpider\obj\Debug\netcoreapp3.0\LIssSpider.dll
 F:\Repos\1.DemoProjects(for test only)\LIssSpider\obj\Debug\netcoreapp3.0\LIssSpider.pdb
+F:\Repos\1.DemoProjects(for test only)\LIssSpider\obj\Debug\netcoreapp3.0\LIssSpider.csproj.CoreCompileInputs.cache
+F:\Repos\1.DemoProjects(for test only)\LIssSpider\obj\Debug\netcoreapp3.0\LIssSpider.genruntimeconfig.cache

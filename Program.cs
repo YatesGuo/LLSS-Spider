@@ -63,7 +63,7 @@ namespace LIssSpider
                 File.Create(magnet_urls).Dispose();
                 StreamWriter sw_md = File.AppendText(magnet_urls);
                 sw_md.WriteLine(@$"---
-title: LLSS {DateTime.Now.ToString("yyyyMMdd")}
+title: LLSS {DateTime.Now:yyyyMMdd}
 date: {DateTime.Now}
 tags:  琉璃神社
 ---");
@@ -105,7 +105,7 @@ tags:  琉璃神社
 
             foreach (string PostsUrl in PostUrls)
             {
-                string vieweing_Post_url = PostsUrl.Replace($"{mainPage}", "");
+                string vieweing_Post_url = PostsUrl.Replace($"{mainPage}/wp/", "");
                 if (File.ReadAllText(viewed_Posts).Contains(vieweing_Post_url))
                 {//判断存档中是否包含
                     continue;
@@ -178,7 +178,7 @@ tags:  琉璃神社
                 Console.WriteLine(PostsUrl);
             }
 
-            string writeline = $"\r\n[{DateTime.Today.ToString("yyyyMMdd")}集合](https://github.com/YatesGuo/LLSS-Spider/blob/master/bin/Debug/netcoreapp3.0/{DateTime.Today.ToString("yyyyMMdd")}-magnet_url.md)";
+            string writeline = $"\r\n[{DateTime.Today:yyyyMMdd}集合](https://github.com/YatesGuo/LLSS-Spider/blob/master/bin/Debug/netcoreapp3.0/{DateTime.Today.ToString("yyyyMMdd")}-magnet_url.md)";
             if (File.ReadAllLines(magnet_urls).Length<=5)
             {
                 File.Delete(magnet_urls);
