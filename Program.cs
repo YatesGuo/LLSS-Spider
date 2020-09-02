@@ -49,7 +49,7 @@ namespace LIssSpider
             //https://www.liuli.se/wp/comic.html/page/2
             string mainPage = File.ReadAllText("MainPageUrl.txt");
 
-            string readme = "F:\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\README.md";//修改git readme
+            string readme = "D:\\桌面\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\README.md";//修改git readme
             string viewed_Posts = Environment.CurrentDirectory + "\\viewed_Posts.txt";
             string magnet_urls = Environment.CurrentDirectory + "\\"+DateTime.Today.ToString("yyyyMMdd")+"-magnet_url.md";
             
@@ -76,11 +76,11 @@ tags:  琉璃神社
             List<string> PostUrls = new List<string>();
             List<string> urls = new List<string>
             {
-                mainPage + "wp/comic.html/"
+                mainPage + "wp/category/all/comic/"//第一页的地址
             };
             for (int i = 2; i < 5; i++)
             {
-                urls.Add(@$"{mainPage}wp/comic.html/page/{i}/");
+                urls.Add(@$"{mainPage}wp/category/all/comic/page/{i}/");//第二页后的地址拼接
             }
 
             foreach (string url in urls)

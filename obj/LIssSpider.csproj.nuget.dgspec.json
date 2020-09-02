@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\LIssSpider.csproj": {}
+    "D:\\桌面\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\LIssSpider.csproj": {}
   },
   "projects": {
-    "F:\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\LIssSpider.csproj": {
+    "D:\\桌面\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\LIssSpider.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\LIssSpider.csproj",
+        "projectUniqueName": "D:\\桌面\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\LIssSpider.csproj",
         "projectName": "LIssSpider",
-        "projectPath": "F:\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\LIssSpider.csproj",
-        "packagesPath": "C:\\Users\\Yates\\.nuget\\packages\\",
-        "outputPath": "F:\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\obj\\",
+        "projectPath": "D:\\桌面\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\LIssSpider.csproj",
+        "packagesPath": "C:\\Users\\guoyu\\.nuget\\packages\\",
+        "outputPath": "D:\\桌面\\Repos\\1.DemoProjects(for test only)\\LIssSpider\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Yates\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\guoyu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
