@@ -190,7 +190,7 @@ tags:  琉璃神社
                 ReadmeMd.WriteLine(writeline);
                 ReadmeMd.Flush();
                 ReadmeMd.Close();
-                File.Copy(magnet_urls, "F:\\A\\source\\_posts\\" + DateTime.Today.ToString("yyyyMMdd") + "-magnet_url.md",true);
+                //File.Copy(magnet_urls, "F:\\A\\source\\_posts\\" + DateTime.Today.ToString("yyyyMMdd") + "-magnet_url.md",true);
                 //拷贝到博客
             }
 
